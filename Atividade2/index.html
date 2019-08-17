@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+
+<body>
+    <div id="form">
+        <h1>Formulario</h1>
+        <form action="">
+
+            <label for="nome">Nome:</label> <input type="text" id="nome" />
+            <br><br>
+            <label for="telefone">Telefone</label> <input type="number" id="telefone" />
+            <br><br>
+            <label for="endereço">Endereço</label> <input type="text" id="endereço">
+            <br><br>
+            <label for="email">Email</label> <input type="email" id="email" />
+            <br><br>
+            <label for="senha">Senha</label> <input type="password" id="senha" />
+            <br><br>
+            <label for="confirmar">Confirmar senha:</label> <input type="password" id="confirmar" />
+            <label> Sexo:</label>
+            <input id="Feminino" form="Feminino" type="radio" name="Sexo" value="F"><label for="Feminino">Feminino</label>
+            <input id="Masculino" form="Masculino" type="radio" name="Sexo" value="M"><label for="Masculino">Masculino</label>
+
+        </form>
+        <fieldset>
+            <legend>Perfil</legend>
+            <input type="checkbox" name="administrador" id="administrador"><label for="administrador">administrador</label>
+            <br>
+            <input type="checkbox" name="financeiro" id="financeiro"><label for="financeiro">financeiro</label>
+            <br>
+            <input type="checkbox" name="RH" id="RH"><label for="RH">RH</label>
+            <br>
+            <input type="checkbox" name="corporativo" id="corporativo"><label for="corporativo">corporativo</label>
+            <br>
+            <input type="checkbox" name="contabilidade" id="contabilidade"><label for="contabilidade">contabilidade</label>
+
+        </fieldset>
+
+        <div>
+            <Label for="uf">UF</Label> <select name="uf" id="uf">
+                        <option value="">Selecione</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AM">AM</option>
+                        <option value="AP">AP</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MG">MG</option>
+                        <option value="MS">MS</option>
+                        <option value="MT">MT</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                     </select>
+        </div>
+
+        <div>
+            <label for="municipio">municipio</label> <select name="municipio" id="municipio">
+                <option value="">Selecione</option>
+                <option value="QNL">QNL</option>
+                <option value="Aguas lindas">Aguas lindas</option>
+                <option value="Candangolandia">Candangolandia</option>
+                <option value="Brasilandia">Brasilandia</option>
+                <option value="Ceilandia">Ceilandia</option>
+                <option value="Taguatinga">Taguatinga</option>
+                <option value="Plano piloto">Plano piloto</option>
+                <option value="Samambaia">Samambaia</option>
+             </select>
+        </div>
+        <br>
+        <label for="obs">Observação:</label> <textarea name="obs" id="obs" cols="30" rows="5"></textarea>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </div>
+
+</body>
+
+</html>
