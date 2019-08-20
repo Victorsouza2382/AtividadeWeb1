@@ -1,0 +1,45 @@
+#form {
+    width: 300px;
+    background: #F2F2F2;
+    border-width: 3px;
+    border-style: outset;
+    border-color: silver
+}
+
+#h1 {
+    text-align: center;
+}
+
+#Centralizar {
+    position: relative;
+    min-height: 100vh;
+}
+
+#Cor {
+    background-color: #CEE3F6;
+}
+
+#form {
+    margin: 0 auto;
+    padding: 5px;
+}
+
+#CorListagem {
+    background-color: #ECF0F0;
+}
+
+#td1 {
+    width: 300px;
+}
+
+#telefoneListagem {
+    width: 260px;
+}
+
+#endereco {
+    width: 260px;
+}
+
+#emailListagem {
+    width: 480px;
+}

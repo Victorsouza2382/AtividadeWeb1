@@ -15,33 +15,33 @@
         </div>
         <form action="">
 
-            <label for="nome">Nome:</label><input type="text" id="nome" placeholder="Seu nome" />
+            <label for="nome">Nome:</label> <input type="text" id="nome" value="Victor José" />
             <br><br>
-            <label for="telefone">Telefone:</label> <input type="number" id="telefone" placeholder="(DDD) XXXX-XXXX" />
+            <label for="telefone">Telefone</label> <input type="tel" id="telefone" value="61 986575413" />
             <br><br>
-            <label for="endereço">Endereço:</label> <input type="text" id="endereço" placeholder="Endereço" />
+            <label for="endereço">Endereço</label> <input type="text" id="endereço" value="QNP 10 CONJ T CASA 90">
             <br><br>
-            <label for="email">Email:</label> <input type="email" id="email" placeholder="Email" />
+            <label for="email">Email</label> <input type="email" id="email" value="alterar@gmail.com" />
             <br><br>
-            <label for="senha">Senha:</label> <input type="password" id="senha" placeholder="Senha" />
+            <label for="senha">Senha</label> <input type="password" id="senha" value="123456" />
             <br><br>
-            <label for="confirmar">Confirmar senha:</label> <input type="password" id="confirmar" placeholder="Confirme sua senha!" />
+            <label for="confirmar">Confirmar senha:</label> <input type="password" id="confirmar" value="123456" />
             <label> Sexo:</label>
-            <input id="Feminino" type="radio" name="Sexo" value="F"><label for="Feminino">Feminino</label>
-            <input id="Masculino" type="radio" name="Sexo" value="M"><label for="Masculino">Masculino</label>
+            <input id="Feminino" form="Feminino" type="radio" name="Sexo" value="F"><label for="Feminino">Feminino</label>
+            <input id="Masculino" form="Masculino" type="radio" name="Sexo" value="M" checked><label for="Masculino">Masculino</label>
 
 
             <fieldset>
                 <legend>Perfil</legend>
-                <input type="checkbox" name="administrador" id="administrador"><label for="administrador">administrador</label>
+                <input type="checkbox" name="administrador" id="administrador" checked><label for="administrador">administrador</label>
                 <br>
-                <input type="checkbox" name="financeiro" id="financeiro"><label for="financeiro">financeiro</label>
+                <input type="checkbox" name="financeiro" id="financeiro" checked><label for="financeiro">financeiro</label>
                 <br>
                 <input type="checkbox" name="RH" id="RH"><label for="RH">RH</label>
                 <br>
                 <input type="checkbox" name="corporativo" id="corporativo"><label for="corporativo">corporativo</label>
                 <br>
-                <input type="checkbox" name="contabilidade" id="contabilidade"><label for="contabilidade">contabilidade</label>
+                <input type="checkbox" name="contabilidade" id="contabilidade" checked><label for="contabilidade">contabilidade</label>
 
             </fieldset>
 
@@ -54,7 +54,7 @@
                         <option value="AP">AP</option>
                         <option value="BA">BA</option>
                         <option value="CE">CE</option>
-                        <option value="DF">DF</option>
+                        <option value="DF" selected>DF</option>
                         <option value="ES">ES</option>
                         <option value="GO">GO</option>
                         <option value="MA">MA</option>
@@ -75,14 +75,14 @@
                 <option value="Aguas lindas">Aguas lindas</option>
                 <option value="Candangolandia">Candangolandia</option>
                 <option value="Brasilandia">Brasilandia</option>
-                <option value="Ceilandia">Ceilandia</option>
+                <option value="Ceilandia" selected>Ceilandia</option>
                 <option value="Taguatinga">Taguatinga</option>
                 <option value="Plano piloto">Plano piloto</option>
                 <option value="Samambaia">Samambaia</option>
              </select>
             </div>
             <br>
-            <label for="obs">Observação:</label> <textarea name="obs" id="obs" cols="30" rows="5"></textarea>
+            <label for="obs">Observação:</label> <textarea name="obs" id="obs" cols="30" rows="5">Usuário digitou uma OBS:</textarea>
             <br>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
