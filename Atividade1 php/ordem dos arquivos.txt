@@ -1,0 +1,7 @@
+notas == exercício 1;
+media_ponderada == exercício 14;
+multiplicacao == exercício 9;
+estoque == exercício 10;
+volume == exercício 8;
+idade == exercício 12;
+

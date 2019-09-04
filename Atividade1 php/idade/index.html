@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <center>
+        <h1><small>Calcular Volume </small></h1>
+    </center>
+
+    <form class="form-horizontal" method="post" action="idade.php">
+        <style>
+            input[type=text] {
+                width: 400px;
+                padding: 18px;
+            }
+        </style>
+
+
+        <div class="form-group">
+            <label for="inputEmail3" class="label"></label>
+            <div class="col-sm-10">
+                <label> Ano de nascimento : </label>
+                <input type="text" class="form-control" id="ano" name="ano" placeholder="Apenas números" required onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="inputEmail3" class="label"></label>
+            <div class="col-sm-10">
+                <label>Ano atual </label>
+                <input type="text" class="form-control" id="anohj" name="anohj" placeholder="Apenas números" required onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+
+            </div>
+        </div>
+
+
+        <br>
+
+        <button type="submit" class="btn btn-success" value="submit">Calcular idade </button>
+
+        <button type="reset" class="btn btn-danger">Limpar</button>
+        <br>
+
+    </form>
+
+
+
+</body>
+
+</html>
