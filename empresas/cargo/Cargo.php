@@ -1,47 +1,54 @@
 <?php
-    include_once '../Conexao.php';
-    include_once '../Model.php';
 
-    class Cargo extends Model
+include_once '../Model.php';
+
+class Cargo extends Model{
+    
+    protected $id_cargo;
+    protected $nomes;
+
+    public function inserir($dados)
+    {        
+        $nome = $dados['nome'];
+        $sql = "insert into cargo (nome) values ('$nome')";        
+        $this->conexao->executar($sql); 
+    }
+
+    public function alterar($dados)
+    {
+        $nome = $dados['nome'];
+        $idcargo = $dados['idcargo'];
+
+        $sql = "UPDATE cargo SET 
+                    nome = '$nome'
+                    WHERE id_cargo";
+                
+        $this->conexao->executar($sql); 
+    }
+
+    public function deletar($idcargo)
     {
 
-        protected $id_cargo;
-        protected $nome;
-
-          
-        public function inserir($dados){
-            $nome = $dados['nome'];
-
-            $sql = "insert into cargo (nome) values ('$nome')";
-    
-             $conexao = new Conexao();
-             return $conexao->executar($sql);  
-        }   
-        public function alterar($dados){
-            $nome = $dados['nome'];
-            $id_cargo = $dados['id_cargo'];
-
-            $sql = "update cargo set nome = '$nome' where $id_cargo";
-
-            $conexao = new Conexao();
-            $conexao->executar($sql);
-            
-        }
-        public function deletar($id_cargo){
-           
-
-            $sql = "delete from cargo where id_cargo = $id_cargo";
-
-            $conexao = new Conexao();
-            $conexao->executar($sql);
-        }
-        public function recuperarTodos(){
-            $sql = "select * from cargo";
-
-            $conexao = new Conexao();
-            return $conexao->recuperarTodos($sql);
-
-        }
+        $sql = "DELETE FROM cargo WHERE id_cargo = $idcargo";
+                
+        $this->conexao->executar($sql); 
     }
+
+    public function recuperarTodos()
+    {
+        $sql = "SELECT * FROM cargo";       
+        return $this->conexao->recuperarTodos($sql);
+    }
+
+    public function recuperarPorId($idcargo)
+    {
+        $sql = "SELECT * FROM cargo WHERE id_cargo = $idcargo";
+        $dados = $this->conexao->recuperarTodos($sql);
+
+        $this->id_cargo = $dados[0]['id_cargo'];
+        $this->nomes = $dados[0]['nome'];
+    }
+
+}  
 
 ?>

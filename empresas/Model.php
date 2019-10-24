@@ -1,20 +1,25 @@
 <?php
 
-    class Model
+include_once '../Conexao.php';
+
+class Model{
+
+    private $conexao = null;
+
+    public function __construct()
     {
-
-        protected $id_cargo;
-        protected $nome;
-
-        function __get($att){
-            return $this->att;
-
+        if(!$this->conexao){
+            $this->conexao = new Conexao();
         }
-        function __set($att, $valor){
-             $this->att = $valor;
-
-        }
-      
     }
-    
+
+    function __get($att){    
+        return $this->$att;
+    }
+
+    function __set($att, $valor){
+        $this->$att = $valor;
+    }
+}
+
 ?>

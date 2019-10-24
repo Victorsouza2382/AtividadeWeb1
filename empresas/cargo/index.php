@@ -2,7 +2,10 @@
 
 include_once 'Cargo.php';
 
-$cargos = Cargo::recuperarTodos();
+$cargo = new Cargo();
+$cargos = $cargo->recuperarTodos();
+
+//$cargos = $cargo::recuperarTodos();
 
 include_once '../cabecalho.php';
 ?>
@@ -21,7 +24,10 @@ include_once '../cabecalho.php';
         foreach ($cargos as $cargo) {
             echo "
                 <tr>
-                    <td><a class='trash' href='processamento.php?acao=deletar&id_cargo={$cargo['id_cargo']}'>Excluir</td>
+                    <td>
+                    <a class='trash' href='processamento.php?acao=deletar&id_cargo={$cargo['id_cargo']}'>Excluir</a>
+                    <a href='formulario.php?id_cargo={$cargo['id_cargo']}'>Alterar</a>
+                    </td>
                     <td>{$cargo['id_cargo']}</td>
                     <td>{$cargo['nome']}</td>
                 </tr>
@@ -31,13 +37,11 @@ include_once '../cabecalho.php';
     </table>
 
     <script>
-        $(function(){
+        $(function(){ 
             $('.trash').click(function(){
-
-                if(!confirm('Deseja excluir?') ){
+                if(!confirm('Deseja excluir?')){
                     return false;
                 }
-                
             })
         })
     </script>
